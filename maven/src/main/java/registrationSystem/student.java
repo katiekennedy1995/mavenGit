@@ -5,12 +5,12 @@ import java.util.Date;
 public class student {
 
 	public String name;
-	public int age;
+	public String age;
 	public Date DOB;
 	public int ID;
 	public String username;
 	
-	public student(String sName, int sAge, Date sDOB, int sID, String sUsername){
+	public student(String sName, String sAge, Date sDOB, int sID, String sUsername){
 		this.name = sName;
 		this.age = sAge;
 		this.DOB = sDOB;
@@ -27,11 +27,11 @@ public class student {
 		this.name = name;
 	}
 	
-	public int getAge(){
+	public String getAge(){
 		return age;
 	}
 	
-	public void setAge(int age){
+	public void setAge(String age){
 		this.age = age;
 	}
 	
@@ -58,5 +58,9 @@ public class student {
 	public void setUsername(String username){
 		this.username = username;
 	}
-	
-}
+	public static String Concatenator(String username, String age)
+	{
+		String user = username.concat(age);
+		return user;
+	}
+	}
