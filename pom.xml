@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>assignment1.ct417</groupId>
+  <artifactId>StudentRegistrationSystem</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+  <name>Student Registration System</name>
+  <description>This is a valid description.</description>
+	
+	
+  <dependencies>
+  	<dependency>
+  		<groupId>joda-time</groupId>
+  		<artifactId>joda-time</artifactId>
+  		<version>2.9.9</version>
+	</dependency>
+	  <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    
+  </dependencies>
+  
+  
+  <repositories>
+	<repository>
+		 <id>jitpack.io</id>
+		 <url>https://jitpack.io</url>
+	</repository>
+   </repositories>
+	<build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.2</version>
+        <configuration> <!-- Compile java 7 compatible bytecode -->
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+
+      <plugin>  <!-- Create sources.jar -->
+            <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+      </plugin>
+
+      <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+      </plugin>
+    </plugins>
+
+  </build>
+
+</project>
