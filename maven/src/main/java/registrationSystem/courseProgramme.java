@@ -9,8 +9,8 @@ public class courseProgramme {
 	
 	private String name;
 	private ArrayList<module> moduleList = new ArrayList<module>();
-	private DateTime startDate;
-	private DateTime endDate;
+	private DateTime startDate = new DateTime();
+	private DateTime endDate = new DateTime();
 
 	
 	public courseProgramme(String cName, DateTime startDate, DateTime endDate){
@@ -33,4 +33,21 @@ public class courseProgramme {
 		this.moduleList = moduleList;
 	}
 
+	public DateTime getStartDate(){
+		return startDate;
+	}
+	
+	public void setStartDate(DateTime sDate){
+		startDate = sDate;
+	}
+	public DateTime getEndDate(){
+		return endDate;
+	}
+	public void setEndDate(DateTime eDate){
+		startDate = eDate;
+	}
+	public void addModule(module m){
+		moduleList.add(m);
+	}
+	
 }
